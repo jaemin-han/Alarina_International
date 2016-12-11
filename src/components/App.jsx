@@ -35,6 +35,7 @@ class App extends Component {
       // username
       // password
     }
+
   }
 
   // COMPANY - REGISTER MODAL
@@ -172,8 +173,8 @@ class App extends Component {
   //   .catch(err => console.log(err));
   // }
 
-  // Create a function for company and user modal buttons [main page]
 
+  // Create a function for company and user modal buttons [main page]
   hiddenModal() {
     const openCompanyModal = document.querySelector("#company-modal-container");
     const openUserModal = document.querySelector("#user-modal-container");
@@ -197,15 +198,6 @@ class App extends Component {
     modalBackground.style.display = "block"
   }
 
-// RENDERING ALL JOBS/POSITIONS on Main subpage**
-// http://stackoverflow.com/questions/35835670/react-router-and-this-props-children-how-to-pass-state-to-this-props-children
-// renderPosition() {
-//   var children = React.Children.map(this.props.children, function (child))
-//   return (<PositionContainer
-//     jobs={this.state.jobs}
-//     />
-//   );
-// }
 
   render(){
     return (

@@ -1,14 +1,11 @@
 // Import the libs we need and import components that parent wants to implement
 import React, { Component } from 'react';
-import { Router, Route, browserHistory, IndexRoute } from 'react-router'
 import CompanyModal from './CompanyModal/CompanyModal.jsx';
 import UserModal from './UserModal/UserModal.jsx';
-import Main from './Main/Main.jsx'
-import Home from './Home/Home.jsx'
+
 // Import css/style
 import './normalize.css';
 import style from './App.css';
-
 
 // Create a React Component called 'App' & Constructor
 class App extends Component {
@@ -34,11 +31,18 @@ class App extends Component {
       passwordUser: '',
       // username
       // password
-    }
+      jobs: [],
+    };
 
   }
 
-  // COMPANY - REGISTER MODAL
+// GLOBAL FUNCTIONS
+  componentDidMount() {
+    this.getAllJobs();
+  }
+//******************************************//
+
+// COMPANY - REGISTER MODAL
 
   // This section updates all register inputs
   updateCompanyName(e) {
@@ -88,6 +92,7 @@ class App extends Component {
       passwordCompany: e.target.value,
     });
   }
+//******************************************//
 
 // Company Login Username and Login Password need to be entered here
 
@@ -141,6 +146,7 @@ class App extends Component {
       passwordUser: e.target.value,
     });
   }
+//******************************************//
 
 // Make sure to enter user login and password here (user)
 
@@ -172,9 +178,24 @@ class App extends Component {
   //   }))
   //   .catch(err => console.log(err));
   // }
+//******************************************//
+
+// RENDER ALL DATA (job positions) on Main.jsx file
+  getAllJobs() {
+    fetch('/job/allPositions')
+    .then(r => r.json())
+    .then((jobs) => {
+      this.setState({
+        jobs: jobs,
+      });
+      console.log('the current state', this.state.jobs);
+    })
+    .catch(error => console.log(error));
+    // this.renderJobs();
+  }
 
 
-  // Create a function for company and user modal buttons [main page]
+// Create a function for company and user modal buttons [main page]
   hiddenModal() {
     const openCompanyModal = document.querySelector("#company-modal-container");
     const openUserModal = document.querySelector("#user-modal-container");
@@ -197,7 +218,7 @@ class App extends Component {
     openUserModal.style.display = "block"
     modalBackground.style.display = "block"
   }
-
+//******************************************//
 
   render(){
     return (
@@ -239,7 +260,11 @@ class App extends Component {
           passwordUser = {this.state.passwordUser}
         />
       </div>
-        {this.props.children}
+
+        {this.props.children && React.cloneElement(this.props.children, {
+          state: this.state,
+        })}
+
       </div>
     );
   }

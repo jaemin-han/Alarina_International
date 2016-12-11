@@ -24,9 +24,9 @@ const PORT    = process.argv[2] || process.env.port || 3000;
 // Listening to port and console logs message
 app.use(logger('dev'));
 app.use(express.static(path.join(__dirname, 'dist')));
-app.get('*', (req, res) => {
-  res.sendFile(path.resolve(__dirname, 'dist', 'index.html'))
-});
+// app.get('*', (req, res) => {
+//   res.sendFile(path.resolve(__dirname, 'dist', 'index.html'))
+// });
 app.use(bodyParser.json());
 
 app.use('/user', userRoute);

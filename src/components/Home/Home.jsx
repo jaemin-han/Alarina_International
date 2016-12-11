@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router'
+import { Link } from 'react-router';
 import '../normalize.css';
 import './Home.css';
 
-export default class Home extends Component {
-  render() {
-    return (
+const Home = props => (
+
       <div id="home-container">
       {/*Google Font here*/}
 
@@ -13,9 +12,10 @@ export default class Home extends Component {
 
         <h2 id="home-h2">rabitur sodales ligula in libero. Sed dignissim lacinia nunc.</h2>
 
-        <button id="home-button"><Link id="home-link" to='/main'>Search Now</Link></button>
+        <Link id="home-link" to="/main">Search Now</Link>
 
       </div>
-    );
-  }
-}
+
+  );
+
+export default Home;

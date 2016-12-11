@@ -1,0 +1,14 @@
+.position-template {
+  padding: 10px 80px;
+  border: 1px solid black;
+  margin: 30px;
+}
+
+#position-title {
+  font-size: 30px;
+}
+
+#position-description {
+  font-size: 20px;
+  text-align: left;
+}

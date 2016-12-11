@@ -6,6 +6,7 @@ import './Home.css';
 const Home = props => (
 
       <div id="home-container">
+      <div></div>
       {/*Google Font here*/}
 
         <h1 id="home-h1">Sed cursus ante dapibus diam. </h1>

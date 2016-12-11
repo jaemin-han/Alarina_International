@@ -1,0 +1,43 @@
+DROP TABLE IF EXISTS users;
+DROP TABLE IF EXISTS company;
+DROP TABLE IF EXISTS job;
+DROP TABLE IF EXISTS application;
+
+CREATE TABLE users (
+  id SERIAL PRIMARY KEY,
+  f_name VARCHAR (20) NOT NULL,
+  l_name VARCHAR (20) NOT NULL,
+  email TEXT NOT NULL,
+  college VARCHAR (255) NOT NULL,
+  degree VARCHAR (255) NOT NULL,
+  username VARCHAR NOT NULL UNIQUE,
+  password VARCHAR NOT NULL,
+  date_created TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE company (
+  id SERIAL PRIMARY KEY,
+  company_name TEXT NOT NULL,
+  company_description TEXT NOT NULL,
+  industry VARCHAR (255) NOT NULL,
+  city VARCHAR (20) NOT NULL,
+  website TEXT NOT NULL,
+  username VARCHAR NOT NULL UNIQUE,
+  password VARCHAR NOT NULL,
+  date_created TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE job (
+  id SERIAL PRIMARY KEY,
+  position VARCHAR (255) NOT NULL,
+  description TEXT NOT NULL,
+  company_id INT,
+  date_created TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE application (
+  id SERIAL PRIMARY KEY,
+  user_id INT,
+  job_id INT,
+  date_created TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+);

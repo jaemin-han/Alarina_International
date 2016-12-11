@@ -5,11 +5,11 @@ import UserModal from './UserModal/UserModal.jsx';
 
 // Import css/style
 import './normalize.css';
-import style from './App.css';
+import './App.css';
 
 // Create a React Component called 'App' & Constructor
 class App extends Component {
-  constructor(){
+  constructor() {
     super();
     // initial states that will always changed over time
     this.state = {
@@ -33,14 +33,13 @@ class App extends Component {
       // password
       jobs: [],
     };
-
   }
 
 // GLOBAL FUNCTIONS
   componentDidMount() {
     this.getAllJobs();
   }
-//******************************************//
+// ******************************************//
 
 // COMPANY - REGISTER MODAL
 
@@ -92,7 +91,7 @@ class App extends Component {
       passwordCompany: e.target.value,
     });
   }
-//******************************************//
+// ******************************************//
 
 // Company Login Username and Login Password need to be entered here
 
@@ -146,7 +145,7 @@ class App extends Component {
       passwordUser: e.target.value,
     });
   }
-//******************************************//
+// ******************************************//
 
 // Make sure to enter user login and password here (user)
 
@@ -178,7 +177,7 @@ class App extends Component {
   //   }))
   //   .catch(err => console.log(err));
   // }
-//******************************************//
+// ******************************************//
 
 // RENDER ALL DATA (job positions) on Main.jsx file
   getAllJobs() {
@@ -218,9 +217,9 @@ class App extends Component {
     openUserModal.style.display = "block"
     modalBackground.style.display = "block"
   }
-//******************************************//
+// ******************************************//
 
-  render(){
+  render() {
     return (
       <div id="app-container">
 
@@ -233,33 +232,33 @@ class App extends Component {
       {/*Modal Buttons for both Company and User register/login*/}
       <div id="main-page-top-button">
         <button className="company-btn" onClick={this.companyButton.bind(this)}>Company</button>
-        <button className='company-btn' onClick={this.userButton.bind(this)}>User</button>
+        <button className="company-btn" onClick={this.userButton.bind(this)}>User</button>
       </div>
 
-      <div id="company-modal">
+        <div id="company-modal">
         {/*{this.state.register && */}
-        <CompanyModal
-          companyName = {this.state.companyName}
-          companyDescription = {this.state.companyDescription}
-          industry = {this.state.industry}
-          city = {this.state.industry}
-          website = {this.state.website}
-          usernameCompany = {this.state.usernameCompany}
-          passwordCompany = {this.state.passwordCompany}
-        />
-      </div>
+          <CompanyModal
+            companyName={this.state.companyName}
+            companyDescription={this.state.companyDescription}
+            industry={this.state.industry}
+            city={this.state.industry}
+            website={this.state.website}
+            usernameCompany={this.state.usernameCompany}
+            passwordCompany={this.state.passwordCompany}
+          />
+        </div>
 
-      <div id="user-modal">
-        <UserModal
-          firstName = {this.state.firstName}
-          lastName = {this.state.lastName}
-          email = {this.state.email}
-          college = {this.state.college}
-          degree = {this.state.degree}
-          usernameUser = {this.state.usernameUser}
-          passwordUser = {this.state.passwordUser}
-        />
-      </div>
+        <div id="user-modal">
+          <UserModal
+            firstName={this.state.firstName}
+            lastName={this.state.lastName}
+            email={this.state.email}
+            college={this.state.college}
+            degree={this.state.degree}
+            usernameUser={this.state.usernameUser}
+            passwordUser={this.state.passwordUser}
+          />
+        </div>
 
         {this.props.children && React.cloneElement(this.props.children, {
           state: this.state,

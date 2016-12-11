@@ -7,7 +7,7 @@ const PositionContainer = props => {
     return (
       <PositionTemplate
         key={job.id.toString()}
-        title={job.title}
+        position={job.position}
         description={job.description}
         company_id={job.company_id}
         date_created={job.date_created}

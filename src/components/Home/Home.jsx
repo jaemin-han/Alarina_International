@@ -5,17 +5,17 @@ import './Home.css';
 
 const Home = props => (
 
-      <div id="home-container">
-      <div></div>
-      {/*Google Font here*/}
+  <div id="home-container">
 
-        <h1 id="home-h1">Sed cursus ante dapibus diam. </h1>
+  {/*Google Font here*/}
 
-        <h2 id="home-h2">rabitur sodales ligula in libero. Sed dignissim lacinia nunc.</h2>
+    <h1 id="home-h1">Sed cursus ante dapibus diam. </h1>
 
-        <Link id="home-link" to="/main">Search Now</Link>
+    <h2 id="home-h2">rabitur sodales ligula in libero. Sed dignissim lacinia nunc.</h2>
 
-      </div>
+    <Link id="home-link" to="/main">Search Now</Link>
+
+  </div>
 
   );
 

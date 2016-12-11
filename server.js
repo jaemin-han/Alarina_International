@@ -11,7 +11,7 @@ const bodyParser = require('body-parser');
 
 const userRoute = require('./routes/user.js');
 const companyRoute = require('./routes/company.js');
-// const jobRoute = require('./routes/job.js');
+const jobRoute = require('./routes/job.js');
 // const applicationRoute = require('./routes/application.js');
 
 // Invoking the express library
@@ -31,7 +31,7 @@ app.use(bodyParser.json());
 
 app.use('/user', userRoute);
 app.use('/company', companyRoute);
-// app.use('/job', jobRoute);
+app.use('/job', jobRoute);
 // app.use('/application', applicationRoute);
 
 app.listen(PORT, () => console.log('server here! listening on', PORT));

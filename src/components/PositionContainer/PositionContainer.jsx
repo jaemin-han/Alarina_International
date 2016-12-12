@@ -8,8 +8,10 @@ const PositionContainer = props => {
       <PositionTemplate
         key={job.id.toString()}
         position={job.position}
-        description={job.description}
-        company_id={job.company_id}
+        // description={job.description}
+        company={job.job_company}
+        city={job.city}
+        // company_id={job.company_id}
         date_created={job.date_created}
       />
     );

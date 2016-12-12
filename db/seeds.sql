@@ -11,11 +11,11 @@ INSERT INTO company (id, company_name, company_description, industry, city, webs
   (4, 'Data Collector', 'Digital Agency that specializes in website design, custom design development, mobile apps.Top rated web design company.', 'web development', 'san francisco', 'www.datacoder.com', 'Data', '123'),
   (5, 'AirDaN', 'Hospitality company specializes in space sharing all over the world', 'hospitality', 'california', 'www.airdan.com', 'AirDaN', '123');
 
-INSERT INTO job (id, position, description, company_id) VALUES
-  (1, 'junior fullstack developer', 'Looking for an exiting adventure? Data Collector is on currently looking for a junior full stack developer to join our team, and take part in huge role, Join today.', 4),
-  (2, 'visual designer', 'You will have the chance to grow quickly within our rapidly scaling company. Your role may evolve as we scale, but you don’t fear change, you see opportunity. Strong communication skills are a must.', 3),
-  (3, 'revenue manager', 'This position requires a combination of revenue management knowledge and tactical online marketing. He/She must also assist our Sales team to serve as a point of contact for all the clients needs from relationship connection, customer-service and support the customers product enhancement requirements.', 2),
-  (4, 'Hedge Fund', 'Analyst will report to our Director of Acquisitions, the Hedge Fund Analyst will also support the evaluation, corporate management, due diligence, risk management, integration and closing of real estate transactions. 3+ years of experience.', 1);
+INSERT INTO job (id, position, description, job_company, city, company_id) VALUES
+  (1, 'Junior Fullstack Developer', 'Looking for an exiting adventure? Data Collector is on currently looking for a junior full stack developer to join our team, and take part in huge role, Join today.', 'AirDaN', 'New York', 4),
+  (2, 'Visual Designer', 'You will have the chance to grow quickly within our rapidly scaling company. Your role may evolve as we scale, but you don’t fear change, you see opportunity. Strong communication skills are a must.', 'Design Academy', 'Los Angeles', 3),
+  (3, 'Corporate Revenue Manager', 'This position requires a combination of revenue management knowledge and tactical online marketing. He/She must also assist our Sales team to serve as a point of contact for all the clients needs from relationship connection, customer-service and support the customers product enhancement requirements.', 'Hospitality Group', 'New Jersey',  2),
+  (4, 'Hedge Fund Analyst', 'Analyst will report to our Director of Acquisitions, the Hedge Fund Analyst will also support the evaluation, corporate management, due diligence, risk management, integration and closing of real estate transactions. 3+ years of experience.', 'Strategic Development', 'New York', 1);
 
 INSERT INTO application (id, user_id, job_id) VALUES
   (1, 1, 1),

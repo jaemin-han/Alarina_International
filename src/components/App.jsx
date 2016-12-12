@@ -32,7 +32,7 @@ class App extends Component {
       // username
       // password
       jobs: [],
-      // companyinfo: [],
+      companyinfo: [],
     };
   }
 
@@ -196,17 +196,17 @@ class App extends Component {
 // ******************************************//
 
 // RENDER ALL COMPANY DATA on Job.jsx file
-  // getAllJobs() {
-  //   fetch('/job/allPositions')
-  //   .then(r => r.json())
-  //   .then((jobs) => {
-  //     this.setState({
-  //       companyinfo: companyinfo,
-  //     });
-  //     console.log('the current state', this.state.jobs);
-  //   })
-  //   .catch(error => console.log(error));
-  // }
+  companyName() {
+    fetch('/company/getCompanyInfo')
+    .then(r => r.json())
+    .then((companyinfo) => {
+      this.setState({
+        companyinfo: companyinfo,
+      });
+      console.log('the current state', this.state.companyInfo);
+    })
+    .catch(error => console.log(error));
+  }
 
 
 // Create a function for company and user modal buttons [main page]

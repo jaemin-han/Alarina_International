@@ -5,7 +5,7 @@ function getAllJobs(req, res, next) {
   console.log('get all jobs.');
   db.any(`SELECT * FROM job`)
     .then((jobs) => {
-      console.log('result of jobs', jobs);
+      // console.log('result of jobs', jobs);
       res.jobs = jobs;
       next();
     })

@@ -10,7 +10,7 @@ const CompanyTemplate = props => (
     <h2 id="company-industry">{props.industry}</h2>
     <h2 id="company-city">Head Quarter: {props.city}</h2>
     <h2 id="company-website">{props.website}</h2>
-    <h2 id="company-date">{props.date_created}</h2>
+    {/*<h2 id="company-date">{props.date_created}</h2>*/}
 
   </div>
 );

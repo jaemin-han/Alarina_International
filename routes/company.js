@@ -7,9 +7,4 @@ const sendJSONresp = (req, res) => res.json(res.jobs || []);
 companyRoute.route('/getCompanyInfo')
   .get(getCompanyInfo, sendJSONresp);
 
-// Route to get company information
-// companyRoute.get('/:id', getCompanyInfo, (req, res) => {
-//   res.json(res.companyinfo);
-// });
-
 module.exports = companyRoute;

@@ -7,7 +7,7 @@ CREATE TABLE users (
   id SERIAL PRIMARY KEY,
   f_name VARCHAR (20) NOT NULL,
   l_name VARCHAR (20) NOT NULL,
-  email TEXT NOT NULL,
+  email TEXT NOT NULL UNIQUE,
   college VARCHAR (255) NOT NULL,
   degree VARCHAR (255) NOT NULL,
   username VARCHAR NOT NULL UNIQUE,
@@ -31,6 +31,8 @@ CREATE TABLE job (
   id SERIAL PRIMARY KEY,
   position VARCHAR (255) NOT NULL,
   description TEXT NOT NULL,
+  job_company TEXT NOT NULL,
+  city TEXT NOT NULL,
   company_id INT,
   date_created TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );

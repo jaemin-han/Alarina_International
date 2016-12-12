@@ -32,8 +32,10 @@ class App extends Component {
       // username
       // password
       jobs: [],
+      // companyinfo: [],
     };
   }
+
 
 // GLOBAL FUNCTIONS
   componentDidMount() {
@@ -74,11 +76,11 @@ class App extends Component {
     });
   }
 
-  updateWebsite(e) {
-    this.setState({
-      website: e.target.value,
-    });
-  }
+  // updateWebsite(e) {
+  //   this.setState({
+  //     website: e.target.value,
+  //   });
+  // }
 
   updateUsernameCompany(e) {
     this.setState({
@@ -190,8 +192,21 @@ class App extends Component {
       console.log('the current state', this.state.jobs);
     })
     .catch(error => console.log(error));
-    // this.renderJobs();
   }
+// ******************************************//
+
+// RENDER ALL COMPANY DATA on Job.jsx file
+  // getAllJobs() {
+  //   fetch('/job/allPositions')
+  //   .then(r => r.json())
+  //   .then((jobs) => {
+  //     this.setState({
+  //       companyinfo: companyinfo,
+  //     });
+  //     console.log('the current state', this.state.jobs);
+  //   })
+  //   .catch(error => console.log(error));
+  // }
 
 
 // Create a function for company and user modal buttons [main page]

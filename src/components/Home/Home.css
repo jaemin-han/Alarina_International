@@ -15,10 +15,8 @@
   margin: 0;
 }
 
-#home-button {
-  margin-top: 20vh;
-  background: none;
-  border: none;
+#explore-button {
+  margin-top: 25vh;
 }
 
 #home-link {

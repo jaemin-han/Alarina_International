@@ -1,5 +1,20 @@
 const db = require('../lib/dbConnect.js');
 
+function getCompanyInfo(req, res, next) {
+  db.any(`SELECT application.id
+          FROM users
+          INNER JOIN application
+          ON users.id = application.user_id
+          WHERE users.id = $1;
+          `, [req,params.id])
+  .then((companyinfo) => {
+    res.companyinfo = companyinfo;
+    next();
+  })
+  .catch(error => next(err));
+}
+
+
 function createCompany(req, res, next) {
   console.log('create a new company in database');
   db.none(`INSERT INTO company (company_name, company_description, industry, city, website, username, password)
@@ -27,24 +42,10 @@ function getCompanyByUsername(username) {
   return db.one(`SELECT * FROM company WHERE username = $6;`, [username]);
 }
 
-// function getCompanyInfo(reqm res, next) {
-//   db.any(`SELECT application.id
-//           FROM users
-//           INNER JOIN application
-//           ON users.id = application.user_id
-//           WHERE users.id = $1;
-//           `, [req,params.id])
-//   .then((companyinfo) => {
-//     res.companyinfo = companyinfo;
-//     next();
-//   })
-//   .catch(error => next(err));
-// }
-
 module.exports = {
+  getCompanyInfo,
   createCompany,
   deleteCompany,
   editCompany,
   getCompanyByUsername,
-  // getCompanyInfo
 };

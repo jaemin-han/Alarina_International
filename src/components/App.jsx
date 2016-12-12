@@ -40,6 +40,7 @@ class App extends Component {
 // GLOBAL FUNCTIONS
   componentDidMount() {
     this.getAllJobs();
+    this.getAllCompaniesByPosition();
   }
 // ******************************************//
 
@@ -196,7 +197,7 @@ class App extends Component {
 // ******************************************//
 
 // RENDER ALL COMPANY DATA on Job.jsx file
-  companyName() {
+  getAllCompaniesByPosition() {
     fetch('/company/getCompanyInfo')
     .then(r => r.json())
     .then((companyinfo) => {

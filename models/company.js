@@ -1,19 +1,39 @@
 const db = require('../lib/dbConnect.js');
 
+// function getCompanyInfo(req, res, next) {
+//   db.any(`SELECT application.id
+//           FROM users
+//           INNER JOIN application
+//           ON users.id = application.user_id
+//           WHERE users.id = $1;
+//           `, [req,params.id])
+//   .then((companyinfo) => {
+//     res.companyinfo = companyinfo;
+//     next();
+//   })
+//   .catch(error => next(err));
+// }
+
 function getCompanyInfo(req, res, next) {
-  db.any(`SELECT application.id
-          FROM users
-          INNER JOIN application
-          ON users.id = application.user_id
-          WHERE users.id = $1;
-          `, [req,params.id])
+  db.any(`SELECT * FROM company`)
   .then((companyinfo) => {
     res.companyinfo = companyinfo;
     next();
   })
-  .catch(error => next(err));
+  .catch(error => next (err));
 }
 
+// Display all Jobs/positions
+// function getAllJobs(req, res, next) {
+//   console.log('get all jobs.');
+//   db.any(`SELECT * FROM job`)
+//     .then((jobs) => {
+//       console.log('result of jobs', jobs);
+//       res.jobs = jobs;
+//       next();
+//     })
+//     .catch(err => next (err));
+// }
 
 function createCompany(req, res, next) {
   console.log('create a new company in database');

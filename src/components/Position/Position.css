@@ -1,0 +1,8 @@
+#position-container {
+  text-align: center;
+  width: 100%;
+  height: 93.2vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: #FFFFF0;
+}

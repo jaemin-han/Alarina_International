@@ -13,8 +13,9 @@ const Home = props => (
 
     <h2 id="home-h2">rabitur sodales ligula in libero. Sed dignissim lacinia nunc.</h2>
 
-    <Link id="home-link" to="/main">Search Now</Link>
-
+    <div id="explore-button">
+      <Link id="home-link" to="/main">Explore Now</Link>
+    </div>
   </div>
 
   );

@@ -5,7 +5,7 @@ import './PositionTemplate.css';
 const PositionTemplate = props => (
   <div className="position-template">
     {/*Google Font Paste Here*/}
-    <h1 id="position-title">Position: {props.position}</h1>
+    <h1 id="position-title">{props.position}</h1>
     {/*<h2 id="position-description">{props.description}</h2>*/}
     <h2 id="position-company">Company: {props.company}</h2>
     <h2 id="position-city">Location: {props.city}</h2>

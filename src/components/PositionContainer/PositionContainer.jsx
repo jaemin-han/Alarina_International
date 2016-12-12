@@ -14,7 +14,10 @@ const PositionContainer = props => {
         // company_id={job.company_id}
         date_created={job.date_created}
       />
+
     );
+  // Attempts to create a button that would link to company page with position info.
+  {/*<Link id="home-link" to="/main">Search Now</Link>*/}
   });
 
   return (

@@ -16,7 +16,7 @@ const PositionContainer = props => {
           // company_id={job.company_id}
           // date_created={job.date_created}
         />
-        <Link id="home-link" to="/position">Apply Now</Link>
+        <Link id="Position-link" to="/position">Apply Now</Link>
       </div>
 
     );

@@ -1,8 +1,13 @@
 .position-template {
-  padding: 10px 80px;
+  /*padding: 10px 80px;*/
 /*  border: 1px solid black;*/
-  margin: 30px;
-  width: 50%;
+/*  margin: 30px;
+  width: 50%;*/
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
 }
 
 #position-title {
@@ -12,4 +17,9 @@
 #position-description {
   font-size: 20px;
   text-align: left;
+}
+
+#position-title, #position-company, #position-city, #position-id, #position-date {
+  width: 100%;
+  margin: 0;
 }

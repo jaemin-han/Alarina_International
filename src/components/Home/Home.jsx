@@ -17,15 +17,16 @@ const Home = props => (
         {/*<source src="./kpmg_video".mp4" type="video/ogg" />*/}
     {/*</video>*/}
 
-    <h1 id="home-h1">We Believe in <span>People's</span> Individual <span>Potential</span>.</h1>
+    <h1 id="home-h1">We Believe in <span id="span-box">People's</span> Individual <span id="span-box">Potential.</span></h1>
 
-    <h2 id="home-h2">Let Your Next <span id="span-box">Candidate</span> Make the Difference. </h2>
+    <h2 id="home-h2">Let Your Next <span id="h2-box">Candidate</span> Make the Difference.</h2>
 
-    <h2 id="home-h3">Alarina also believes in our people </h2>
-
+    <h3 id="home-h3">Alarina identifies specific job openings for which companies will sponsor employment visas.</h3>
+      {/*We value the diversity of our employees and the unique perspectives they bring to Alarina.*/}
     <div id="explore-button">
-      <Link id="home-link" to="/main">Explore Today</Link>
+      <Link id="home-link" to="/main">[ Explore Today ]</Link>
     </div>
+
 
   </div>
 

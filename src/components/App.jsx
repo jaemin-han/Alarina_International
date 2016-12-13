@@ -267,8 +267,8 @@ handleSubmitSearch() {
 
       {/*Modal Buttons for both Company and User register/login*/}
       <div id="main-page-top-button">
-        <button className="company-btn" onClick={this.companyButton.bind(this)}>Company</button>
-        <button className="company-btn" onClick={this.userButton.bind(this)}>User</button>
+        <button className="company-btn" onClick={this.userButton.bind(this)}>[ User ]</button>
+        <button className="company-btn" onClick={this.companyButton.bind(this)}>[ Company ]</button>
       </div>
 
         <div id="company-modal">

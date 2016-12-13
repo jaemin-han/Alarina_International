@@ -10,7 +10,7 @@
 }
 
 #home-h1 {
-  margin-top: 25vh;
+  margin-top: 20vh;
   color: #fafafa;
 }
 
@@ -19,23 +19,35 @@
   color: #fafafa;
 }
 
+#home-h3 {
+  color: #fafafa;
+  margin: 0 21vw;
+  font-size: 16px;
+}
+
 #explore-button {
-  margin-top: 25vh;
+  margin-top: 20vh;
   color: #fafafa;
 }
 
 #home-link {
   text-decoration: none;
   color: #fafafa;
-  font-size: 25px;
+  font-size: 30px;
 }
 
-span {
+#home-link:hover {
   font-style: italic;
+  color: tomato;
+}
+
+#h2-box {
+  font-style: italic;
+  text-decoration: underline;
 }
 
 #span-box {
   font-style: italic;
   border: 1px solid #fafafa;
-  padding: 2px 10px 2px 6px;
+  padding: 2px 10px 2px 8px;
 }

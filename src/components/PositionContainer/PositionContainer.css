@@ -5,7 +5,9 @@
   width: 47%;
   justify-content: center;
   align-items: center;
-  border: 1px solid black;
+  border: 3px solid black;
+  margin: 0 1vw;
+  padding: 5vh 0;
 }
 
 #position-container {
@@ -16,9 +18,21 @@
   align-items: center;
 }
 
+#position-main-container:hover {
+  border: 3px solid tomato;
+}
+
 #position-link {
   color: black;
   text-decoration: none;
-  font-size: 30px;
+  font-size: 20px;
   text-align: center;
+  margin-top: 20px;
+  padding: 10px 10px;
+  border: 1px solid black;
+}
+
+#position-link:hover {
+  background-color: black;
+  color: white;
 }

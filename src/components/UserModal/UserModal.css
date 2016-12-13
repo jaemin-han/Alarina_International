@@ -13,3 +13,46 @@
   height: 60vh;
   width: 50vw;
 }
+
+#register-items-user {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  justify-content: center;
+  align-items: center;
+  margin-left: 5vw;
+}
+
+.user-input {
+  margin: 5px;
+}
+
+#first-user-modal-button {
+  background-color: tomato;
+  padding: 1px 56px;
+  border: none;
+  margin: 0 5px 0 4px;
+  cursor: pointer;
+}
+
+#first-user-modal-button:hover {
+  font-style: italic;
+  color: white;
+}
+
+.user-input-sign-in{
+  margin: 5px;
+}
+
+#second-user-modal-button {
+  background-color: tomato;
+  padding: 1px 62px;
+  border: none;
+  margin: 8px 5px 0 4px;
+  cursor: pointer;
+}
+
+#second-user-modal-button:hover {
+  font-style: italic;
+  color: white;
+}

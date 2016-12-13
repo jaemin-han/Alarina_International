@@ -93,7 +93,7 @@ export default class CompanyModal extends Component {
           <br />
 
           {/*Button for Registering [company]*/}
-          <button onClick={this.props.handleCompanyRegisterFormSubmit}>Register</button>
+          <button id="first-company-register-button" onClick={this.props.handleCompanyRegisterFormSubmit}>Register</button>
         </div>
 
         {/* SIGN UP SECTION - company */}
@@ -123,7 +123,7 @@ export default class CompanyModal extends Component {
           <br />
 
           {/*Button for signing in [company]*/}
-          <button onClick={this.props.handleCompanySignInFormSubmit}>Sign In</button>
+          <button id="second-company-register-button" onClick={this.props.handleCompanySignInFormSubmit}>Sign In</button>
         </div>
       </div>
     );

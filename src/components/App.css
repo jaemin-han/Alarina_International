@@ -2,7 +2,7 @@
   z-index: 0;
 /*  height: 100vh;
   width: 100%;*/
-  background-color: #F0F8FF;
+  background-color: black;
 }
 
 #top-nav {
@@ -30,7 +30,7 @@
 }
 
 #main-page-top-button {
-  margin-left: 85vw;
+  margin-left: 81vw;
 }
 
 .company-btn {
@@ -38,6 +38,12 @@
   border: none;
   text-decoration: none;
   color: black;
-  margin-top: 1.5vh;
+  margin: 1.5vh 1.2vw 0 0;
   font-size: 20px;
+  color: #fafafa;
 }
+
+.company-btn:hover {
+  color: tomato;
+}
+

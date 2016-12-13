@@ -60,23 +60,23 @@ export default class UserModal extends Component {
           />
           <br />
 
-          {/*5. User degree Input*/}
-          <input
-            className="user-input"
-            type="text"
-            placeholder="Degree"
-            value={this.props.degree}
-            onChange={this.props.updateDegree}
-          />
-          <br />
-
-          {/*6. User username Input*/}
+          {/*5. User username Input*/}
           <input
             className="user-input"
             type="text"
             placeholder="Username"
             value={this.props.usernameUser}
             onChange={this.props.updateUsernameUser}
+          />
+          <br />
+
+          {/*6. User degree Input -- changed order to modal setup*/}
+          <input
+            className="user-input"
+            type="text"
+            placeholder="Degree"
+            value={this.props.degree}
+            onChange={this.props.updateDegree}
           />
           <br />
 
@@ -91,7 +91,7 @@ export default class UserModal extends Component {
           <br />
 
            {/*Button for Registering [user]*/}
-          <button onClick={this.props.handleUserRegisterFormSubmit}>Register</button>
+          <button id="first-user-modal-button" onClick={this.props.handleUserRegisterFormSubmit}>Register</button>
         </div>
 
         {/* SIGN UP SECTION - company */}
@@ -121,7 +121,7 @@ export default class UserModal extends Component {
           <br />
 
           {/*Button for signing in [company]*/}
-          <button onClick={this.props.handleUserSignInFormSubmit}>Sign In</button>
+          <button id="second-user-modal-button" onClick={this.props.handleUserSignInFormSubmit}>Sign In</button>
         </div>
       </div>
     );

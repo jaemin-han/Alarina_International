@@ -1,5 +1,6 @@
 // Import the libs we need and import components that parent wants to implement
 import React, { Component } from 'react';
+import { browserHistory } from 'react-router';
 import CompanyModal from './CompanyModal/CompanyModal.jsx';
 import UserModal from './UserModal/UserModal.jsx';
 
@@ -9,9 +10,14 @@ import './App.css';
 
 // Create a React Component called 'App' & Constructor
 class App extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+
+
+    super(props);
     // initial states that will always changed over time
+    this.getCompany = this.getCompany.bind(this);
+
+
     this.state = {
       companyName: '',
       companyDescription: '',
@@ -32,8 +38,10 @@ class App extends Component {
       // username
       // password
       jobs: [],
-      companyinfo: [],
+      // companyinfo: [],
       searchTerm: '',
+      company: [],
+      getCompany: this.getCompany
     };
   }
 
@@ -41,7 +49,8 @@ class App extends Component {
 // GLOBAL FUNCTIONS
   componentDidMount() {
     this.getAllJobs();
-    this.getAllCompaniesByPosition();
+    // this.getAllCompaniesByPosition();
+    // this.getCompany();
   }
 // ******************************************//
 
@@ -152,7 +161,6 @@ class App extends Component {
 // ******************************************//
 
 // Make sure to enter user login and password here (user)
-
   // Submit Register info/form in psql
   // handleCompanyRegisterFormSubmit() {
   //   fetch('/company', {
@@ -183,6 +191,46 @@ class App extends Component {
   // }
 // ******************************************//
 
+// CREATE A FUNCTION THAT WILL DISPLAY THE COMPANY BY POSITION ID
+ // job.company_id
+
+// GET COMPANY INFO BASED ON  POSITION
+  getCompany(id) {
+    console.log('fetching..??');
+    fetch(`/company/companyInfo/${id}`)
+    .then(r => r.json())
+    .then((company) => {
+      this.setState({
+        company: company,
+      });
+      console.log('the new state', this.state.company);
+    })
+    .then(()=>browserHistory.push('/position'))
+    .catch(error => console.log(error));
+  }
+
+
+  // getCompany() {
+  //   fetch(`/company/getCompanyInfo/`, {
+  //     headers: {
+  //       'Content-Type': 'application/json',
+  //     },
+  //     method: 'GET',
+  //   })
+  //   .then(r => r.json())
+  //   .then((company) => {
+  //   console.log(company);
+  //     this.setState({
+  //       company: company,
+  //     });
+  //     console.log('the new state', this.state.company);
+  //   })
+  //   .catch(err => console.log('getComment', err));
+  // }
+// ******************************************//
+
+
+// RENDERING SEARCH INFO BASED ON USER'S QUERY
 handleUpdateSearch(e) {
   this.setState({
     searchTerm: e.target.value
@@ -198,9 +246,10 @@ handleSubmitSearch() {
     console.log(jobs.job_company);
     this.setState({
       searchTerm: jobs.job_company
-    })
-  })
+    });
+  });
 }
+// ******************************************//
 
 // RENDER ALL DATA (job positions) on Main.jsx file
   getAllJobs() {
@@ -217,17 +266,18 @@ handleSubmitSearch() {
 // ******************************************//
 
 // RENDER ALL COMPANY DATA on Job.jsx file
-  getAllCompaniesByPosition() {
-    fetch('/company/getCompanyInfo')
-    .then(r => r.json())
-    .then((companyinfo) => {
-      this.setState({
-        companyinfo: companyinfo,
-      });
-      console.log('the current state', this.state.companyInfo);
-    })
-    .catch(error => console.log(error));
-  }
+  // getAllCompaniesByPosition() {
+  //   fetch('/company/getCompanyInfo')
+  //   .then(r => r.json())
+  //   .then((companyinfo) => {
+  //     this.setState({
+  //       companyinfo: companyinfo,
+  //     });
+  //     console.log('the current state', this.state.companyInfo);
+  //   })
+  //   .catch(error => console.log(error));
+  // }
+  // ******************************************//
 
 
 // Create a function for company and user modal buttons [main page]
@@ -298,14 +348,11 @@ handleSubmitSearch() {
 
         {this.props.children && React.cloneElement(this.props.children, {
           state: this.state,
-          // searchTerm={this.state.searchTerm},
-          // handleUpdateSearch={event => this.handleUpdateSearch(event)},
-          // handleSubmitSearch={event => this.handleSubmitSearch(event)},
         })}
 
       </div>
     );
   }
-}
+};
 
 export default App;

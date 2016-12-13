@@ -1,27 +1,32 @@
 const db = require('../lib/dbConnect.js');
 
+// GET A COMPANY INFORMATION BASED ON JOB.COMPANY_ID
+function getCompany(req, res, next) {
+  db.one(`SELECT company.company_name, company.company_description, company.industry, company.city, company.website, job.position, job.city, job.date_created
+          FROM company
+          LEFT JOIN job
+          ON company.id = job.company_id
+          WHERE company.id = $1;
+          `, [req.params.id])
+  .then((company) => {
+    res.company = company;
+    next();
+  })
+  .catch(err => next(err));
+}
+
+// GET ALL COMPANY INFORMATION
 // function getCompanyInfo(req, res, next) {
-//   db.any(`SELECT application.id
-//           FROM users
-//           INNER JOIN application
-//           ON users.id = application.user_id
-//           WHERE users.id = $1;
-//           `, [req,params.id])
+//   db.any(`SELECT * FROM company`)
 //   .then((companyinfo) => {
 //     res.companyinfo = companyinfo;
 //     next();
 //   })
-//   .catch(error => next(err));
+//   .catch(error => next (err));
 // }
-
 function getCompanyInfo(req, res, next) {
-  db.any(`SELECT * FROM company`)
-  .then((companyinfo) => {
-    res.companyinfo = companyinfo;
-    next();
-  })
-  .catch(error => next (err));
-}
+  next();
+};
 
 // Display all Jobs/positions
 // function getAllJobs(req, res, next) {
@@ -63,6 +68,7 @@ function getCompanyByUsername(username) {
 }
 
 module.exports = {
+  getCompany,
   getCompanyInfo,
   createCompany,
   deleteCompany,

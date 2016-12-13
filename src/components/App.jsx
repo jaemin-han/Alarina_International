@@ -33,6 +33,7 @@ class App extends Component {
       // password
       jobs: [],
       companyinfo: [],
+      searchTerm: '',
     };
   }
 
@@ -182,6 +183,25 @@ class App extends Component {
   // }
 // ******************************************//
 
+handleUpdateSearch(e) {
+  this.setState({
+    searchTerm: e.target.value
+  });
+}
+
+handleSubmitSearch() {
+  console.log("searchTerm is", this.state.searchTerm)
+  fetch(`/job/allPositions/${this.state.searchTerm}`)
+  .then(r => r.json())
+  .then((jobs) => {
+    console.log(jobs);
+    console.log(jobs.job_company);
+    this.setState({
+      searchTerm: jobs.job_company
+    })
+  })
+}
+
 // RENDER ALL DATA (job positions) on Main.jsx file
   getAllJobs() {
     fetch('/job/allPositions')
@@ -278,6 +298,9 @@ class App extends Component {
 
         {this.props.children && React.cloneElement(this.props.children, {
           state: this.state,
+          // searchTerm={this.state.searchTerm},
+          // handleUpdateSearch={event => this.handleUpdateSearch(event)},
+          // handleSubmitSearch={event => this.handleSubmitSearch(event)},
         })}
 
       </div>

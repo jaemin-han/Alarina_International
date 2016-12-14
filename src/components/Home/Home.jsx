@@ -7,7 +7,7 @@ const Home = props => (
 
   <div id="home-container">
 
-  {/*Google Font here*/}
+  <link href="https://fonts.googleapis.com/css?family=Montserrat+Alternates" rel="stylesheet" />
 
 
     {/*http://stackoverflow.com/questions/36230522/adding-a-background-video-with-react*/}
@@ -21,10 +21,10 @@ const Home = props => (
 
     <h2 id="home-h2">Let Your Next <span id="h2-box">Candidate</span> Make the Difference.</h2>
 
-    <h3 id="home-h3">Alarina identifies specific job openings for which companies will sponsor employment visas.</h3>
+    {/*<h3 id="home-h3">Alarina identifies specific job openings for which companies will sponsor employment visas.</h3>*/}
       {/*We value the diversity of our employees and the unique perspectives they bring to Alarina.*/}
     <div id="explore-button">
-      <Link id="home-link" to="/main">Explore Today</Link>
+      <Link id="home-link" to="/main">Find Your Future Job</Link>
     </div>
 
 

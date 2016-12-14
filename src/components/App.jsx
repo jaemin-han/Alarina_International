@@ -318,6 +318,8 @@ handleSubmitSearch() {
     return (
       <div id="app-container">
 
+      <link href="https://fonts.googleapis.com/css?family=Montserrat+Alternates" rel="stylesheet" />
+
       <div className="modal-background" onClick={this.hiddenModal.bind(this)}></div>
 
       <div id="top-nav">

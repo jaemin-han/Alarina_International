@@ -6,7 +6,7 @@
   justify-content: center;
   align-items: center;
   border: 3px solid black;
-  margin: 0 1vw;
+  margin: 3vh 1vw;
   padding: 5vh 0;
 }
 
@@ -35,4 +35,11 @@
 #position-link:hover {
   background-color: black;
   color: white;
+}
+
+#position-container-button {
+background: none;
+border: 3px solid black;
+margin-top: 4vh;
+font-size: 25px;
 }

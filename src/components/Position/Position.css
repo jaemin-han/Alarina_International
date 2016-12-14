@@ -11,14 +11,58 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  width: 47%;
+  width: 85%;
   justify-content: center;
   align-items: center;
   border: 3px solid black;
-  margin: 0 1vw;
-  padding: 5vh 10vw;
+  margin: 5vh 1vw;
+  padding: 5vh 3vw;
 }
 
 .position-main-container-page:hover {
   border: 3px solid tomato;
+}
+
+#company-information {
+  width: 100%;
+}
+
+#company-name {
+  width: 100%;
+}
+
+#company-description {
+  width: 100%;
+}
+
+#company-industry {
+  width: 100%;
+}
+
+#company-city {
+  width: 100%;
+}
+
+#company-website {
+  width: 100%;
+}
+
+#job-title {
+  width: 100%;
+}
+
+#ob-position {
+  width: 100%;
+}
+
+#job-description {
+  width: 100%;
+}
+
+#job-city {
+  width: 100%;
+}
+
+#job-date {
+  width: 100%;
 }

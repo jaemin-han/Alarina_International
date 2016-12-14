@@ -27,10 +27,10 @@ export default class PositionContainer extends Component {
               company={job.job_company}
               city={job.city}
               // company_id={job.company_id}
-              // date_created={job.date_created}
+              date_created={job.date_created}
             />
 
-            <button onClick={this.fetchCompany.bind(this)} value={job.company_id}>Apply now</button>
+            <button id="position-container-button" onClick={this.fetchCompany.bind(this)} value={job.company_id}>Apply now</button>
           </div>
         );
       });

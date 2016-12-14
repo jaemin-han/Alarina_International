@@ -41,6 +41,7 @@
   margin: 1.5vh 1.2vw 0 0;
   font-size: 20px;
   color: #fafafa;
+  cursor: pointer;
 }
 
 .company-btn:hover {

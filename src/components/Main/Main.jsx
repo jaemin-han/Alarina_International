@@ -18,7 +18,7 @@ const Main = props => (
 
     <h1 id="main-h1"> - Find Your Perfect Job - </h1>
 
-    <PositionContainer state={props.state} />
+    <PositionContainer jobs={props.state.jobs} getCompany={props.state.getCompany} />
 
   </div>
 );

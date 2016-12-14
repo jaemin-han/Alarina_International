@@ -6,3 +6,19 @@
   overflow-y: auto;
   background-color: #FFFFF0;
 }
+
+.position-main-container-page {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 47%;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid black;
+  margin: 0 1vw;
+  padding: 5vh 10vw;
+}
+
+.position-main-container-page:hover {
+  border: 3px solid tomato;
+}

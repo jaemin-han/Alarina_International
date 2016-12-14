@@ -5,8 +5,8 @@
 // Gets the public folder(CSS/HTML)
 require('dotenv').config({ silent: true });
 const express = require('express');
-const logger  = require('morgan');
-const path    = require('path');
+const logger = require('morgan');
+const path = require('path');
 const bodyParser = require('body-parser');
 
 const userRoute = require('./routes/user.js');
@@ -16,8 +16,8 @@ const jobRoute = require('./routes/job.js');
 
 // Invoking the express library
 // Localhost 3000 || other ports stated
-const app     = express();
-const PORT    = process.argv[2] || process.env.port || 3000;
+const app = express();
+const PORT = process.argv[2] || process.env.port || 3000;
 
 // The express library uses the morgan dependency and outputs default data to the terminal
 // Generates the Path to the folder indicated in the ' ', after __dirname
@@ -30,8 +30,13 @@ app.use(express.static(path.join(__dirname, 'dist')));
 app.use(bodyParser.json());
 
 app.use('/user', userRoute);
-app.use('/company', companyRoute);
+app.use('/company/companyInfo', companyRoute);
 app.use('/job', jobRoute);
 // app.use('/application', applicationRoute);
+app.get('*', (req, res) => {
+  res.sendFile(path.resolve(__dirname, 'dist', 'index.html'));
+});
+
+
 
 app.listen(PORT, () => console.log('server here! listening on', PORT));

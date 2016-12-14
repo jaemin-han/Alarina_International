@@ -196,7 +196,7 @@ class App extends Component {
 
 // GET COMPANY INFO BASED ON  POSITION
   getCompany(id) {
-    console.log('fetching..??');
+    console.log('fetching..yes!!');
     fetch(`/company/companyInfo/${id}`)
     .then(r => r.json())
     .then((company) => {
@@ -208,7 +208,6 @@ class App extends Component {
     .then(()=>browserHistory.push('/position'))
     .catch(error => console.log(error));
   }
-
 
   // getCompany() {
   //   fetch(`/company/getCompanyInfo/`, {
@@ -233,7 +232,7 @@ class App extends Component {
 // RENDERING SEARCH INFO BASED ON USER'S QUERY
 handleUpdateSearch(e) {
   this.setState({
-    searchTerm: e.target.value
+    searchTerm: e.target.value,
   });
 }
 
@@ -245,7 +244,7 @@ handleSubmitSearch() {
     console.log(jobs);
     console.log(jobs.job_company);
     this.setState({
-      searchTerm: jobs.job_company
+      searchTerm: jobs.job_company,
     });
   });
 }

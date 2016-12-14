@@ -5,7 +5,7 @@ function getCompany(req, res, next) {
   db.one(`SELECT company.company_name, company.company_description, company.industry, company.city, company.website, job.position, job.city, job.date_created
           FROM company
           LEFT JOIN job
-          ON company.id = job.company_id
+          ON job.company_id = company.id
           WHERE company.id = $1;
           `, [req.params.id])
   .then((company) => {
@@ -14,6 +14,8 @@ function getCompany(req, res, next) {
   })
   .catch(err => next(err));
 }
+
+// ON company.id = job.company_id
 
 // GET ALL COMPANY INFORMATION
 // function getCompanyInfo(req, res, next) {

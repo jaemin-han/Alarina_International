@@ -4,7 +4,7 @@
   "description": "Sponsorships for international students",
   "main": "server.js",
   "engines": {
-    "node": "7.0.0"
+    "node": "6.6.0"
   },
   "private": true,
   "scripts": {
@@ -27,7 +27,6 @@
   "homepage": "https://github.com/jaemin-han/alarina#readme",
   "dependencies": {
     "body-parser": "^1.15.2",
-    "dotenv": "^2.0.0",
     "express": "^4.14.0",
     "morgan": "^1.7.0",
     "path": "^0.12.7",
@@ -54,6 +53,7 @@
     "postcss-loader": "^1.1.1",
     "react": "^15.3.0",
     "react-dom": "^15.3.0",
+    "dotenv": "^2.0.0",
     "react-router": "^3.0.0",
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.7",

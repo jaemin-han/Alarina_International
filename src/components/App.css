@@ -30,7 +30,7 @@
 }
 
 #main-page-top-button {
-  margin-left: 81vw;
+  margin-left: 79vw;
 }
 
 .company-btn {
@@ -38,7 +38,7 @@
   border: none;
   text-decoration: none;
   color: black;
-  margin: 1.5vh 1.2vw 0 0;
+  margin: 1.5vh .7vw 0 0;
   font-size: 20px;
   color: #fafafa;
   cursor: pointer;

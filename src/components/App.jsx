@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import { browserHistory } from 'react-router';
 import CompanyModal from './CompanyModal/CompanyModal.jsx';
 import UserModal from './UserModal/UserModal.jsx';
+import About from './About/About.jsx';
 
 // Import css/style
 import './normalize.css';
@@ -283,9 +284,11 @@ handleSubmitSearch() {
   hiddenModal() {
     const openCompanyModal = document.querySelector("#company-modal-container");
     const openUserModal = document.querySelector("#user-modal-container");
+    const openAboutModal = document.querySelector("#about-modal-container");
     const modalBackground = document.querySelector(".modal-background");
     openCompanyModal.style.display = "none"
     openUserModal.style.display = "none"
+    openAboutModal.style.display = "none"
     modalBackground.style.display = "none"
   }
 
@@ -300,6 +303,13 @@ handleSubmitSearch() {
     const openUserModal = document.querySelector("#user-modal-container");
     const modalBackground = document.querySelector(".modal-background");
     openUserModal.style.display = "block"
+    modalBackground.style.display = "block"
+  }
+
+  aboutButton() {
+    const openAboutModal = document.querySelector("#about-modal-container");
+    const modalBackground = document.querySelector(".modal-background");
+    openAboutModal.style.display = "block"
     modalBackground.style.display = "block"
   }
 // ******************************************//
@@ -318,6 +328,7 @@ handleSubmitSearch() {
       <div id="main-page-top-button">
         <button className="company-btn" onClick={this.userButton.bind(this)}>User</button>
         <button className="company-btn" onClick={this.companyButton.bind(this)}>Company</button>
+        <button className="company-btn" onClick={this.aboutButton.bind(this)}>About</button>
       </div>
 
         <div id="company-modal">
@@ -343,6 +354,10 @@ handleSubmitSearch() {
             usernameUser={this.state.usernameUser}
             passwordUser={this.state.passwordUser}
           />
+        </div>
+
+        <div id="about-modal">
+          <About />
         </div>
 
         {this.props.children && React.cloneElement(this.props.children, {

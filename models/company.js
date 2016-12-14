@@ -2,7 +2,7 @@ const db = require('../lib/dbConnect.js');
 
 // GET A COMPANY INFORMATION BASED ON JOB.COMPANY_ID
 function getCompany(req, res, next) {
-  db.one(`SELECT company.company_name, company.company_description, company.industry, company.city, company.website, job.position, job.city, job.date_created
+  db.one(`SELECT company.company_name, company.company_description, company.industry, company.city, company.website, job.position, job.description, job.date_created
           FROM company
           LEFT JOIN job
           ON job.company_id = company.id

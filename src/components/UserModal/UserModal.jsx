@@ -15,8 +15,9 @@ export default class UserModal extends Component {
     return (
       //Div id containing user 'register' and 'sign in'
       <div id="user-modal-container">
-      {/*Add Google Font Link Here*/}
-      <h2 id="register-title-user">- User Register -</h2>
+      <link href="https://fonts.googleapis.com/css?family=Montserrat+Alternates" rel="stylesheet" />
+
+      <h2 id="register-title-user">User Register</h2>
 
         <div id="register-items-user">
 
@@ -94,9 +95,11 @@ export default class UserModal extends Component {
           <button id="first-user-modal-button" onClick={this.props.handleUserRegisterFormSubmit}>Register</button>
         </div>
 
+        <hr id="line-style"/>
+
         {/* SIGN UP SECTION - company */}
 
-        <h2 id="signin-title-user">- User Sign In -</h2>
+        <h2 id="signin-title-user">User Sign In</h2>
 
         <div id="sign-in-items-user">
 

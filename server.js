@@ -14,10 +14,12 @@ const companyRoute = require('./routes/company.js');
 const jobRoute = require('./routes/job.js');
 // const applicationRoute = require('./routes/application.js');
 
+const isDev = !('NODE_ENV' in process.env) && require('dotenv').config() && true;
+
 // Invoking the express library
 // Localhost 3000 || other ports stated
 const app = express();
-const PORT = process.argv[2] || process.env.port || 3000;
+const PORT = process.argv[2] || process.env.PORT || 3000;
 
 // The express library uses the morgan dependency and outputs default data to the terminal
 // Generates the Path to the folder indicated in the ' ', after __dirname

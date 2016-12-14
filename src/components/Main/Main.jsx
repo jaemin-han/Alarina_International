@@ -16,7 +16,7 @@ import './Main.css';
 const Main = props => (
   <div id="main-container">
 
-    <h1 id="main-h1"> - Find Your Perfect Job - </h1>
+    <h1 id="main-h1"> Say "YES" to Sponsorship - Find Your Dream Job </h1>
 
     <PositionContainer jobs={props.state.jobs} getCompany={props.state.getCompany} />
 

@@ -20,7 +20,7 @@ CREATE TABLE company (
   company_name TEXT NOT NULL,
   company_description TEXT NOT NULL,
   industry VARCHAR (255) NOT NULL,
-  city VARCHAR (20) NOT NULL,
+  city VARCHAR (255) NOT NULL,
   website TEXT NOT NULL,
   username VARCHAR NOT NULL UNIQUE,
   password VARCHAR NOT NULL,

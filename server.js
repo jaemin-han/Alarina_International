@@ -3,7 +3,7 @@
 // Requires the express library
 // Logger that sends inputs(errors: 200, 304, 404, 500, etc) to the terminal
 // Gets the public folder(CSS/HTML)
-// require('dotenv').config({ silent: true });
+require('dotenv').config({ silent: true });
 const express = require('express');
 const logger = require('morgan');
 const path = require('path');

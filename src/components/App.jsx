@@ -18,7 +18,7 @@ class App extends Component {
     // initial states that will always changed over time
     this.getCompany = this.getCompany.bind(this);
 
-
+    // Passing state
     this.state = {
       companyName: '',
       companyDescription: '',
@@ -42,7 +42,7 @@ class App extends Component {
       // companyinfo: [],
       searchTerm: '',
       company: [],
-      getCompany: this.getCompany
+      getCompany: this.getCompany,
     };
   }
 
@@ -131,12 +131,6 @@ class App extends Component {
   }
 
   updateCollege(e) {
-    this.setState({
-      college: e.target.value,
-    });
-  }
-
-  updateDegree(e) {
     this.setState({
       college: e.target.value,
     });

@@ -14,6 +14,14 @@
   width: 50vw;
 }
 
+#register-title-company {
+  font-family: 'Montserrat Alternates', sans-serif;
+}
+
+#signin-title-company {
+  font-family: 'Montserrat Alternates', sans-serif;
+}
+
 #register-items-company {
   display: flex;
   flex-wrap: wrap;
@@ -25,19 +33,33 @@
 
 .company-input {
   margin: 5px;
+  font-family: 'Montserrat Alternates', sans-serif;
 }
 
 #first-company-register-button {
   background-color: tomato;
-  padding: 1px 56px;
+  padding: 3px 63px;
   border: none;
   margin: 0 5px 0 4px;
   cursor: pointer;
+  font-family: 'Montserrat Alternates', sans-serif;
+
 }
 
 #first-company-register-button:hover {
   font-style: italic;
   color: white;
+  font-family: 'Montserrat Alternates', sans-serif;
+}
+
+/*Reference from codepen: https://codepen.io/ibrahimjabbari/pen/ozinB*/
+#line-style-two {
+  border: 0;
+  height: 1px;
+  background-image: -webkit-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+  background-image: -moz-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+  background-image: -ms-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+  background-image: -o-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
 }
 
 .company-input-sign-in {
@@ -46,13 +68,15 @@
 
 #second-company-register-button {
   background-color: tomato;
-  padding: 1px 62px;
+  padding: 3px 58px;
   border: none;
   margin: 8px 5px 0 4px;
   cursor: pointer;
+  font-family: 'Montserrat Alternates', sans-serif;
 }
 
 #second-company-register-button:hover {
   font-style: italic;
   color: white;
+  font-family: 'Montserrat Alternates', sans-serif;
 }

@@ -5,6 +5,7 @@
   overflow-x: hidden;
   overflow-y: auto;
   background-color: #FFFFF0;
+  /*background: rgba(0, 0, 0, 0.4);*/
 }
 
 #main-form {
@@ -12,6 +13,27 @@
 }
 
 #main-h1 {
-  border: 1px solid black;
-  padding: 2vh 0;
+  padding: 1vh 0;
+  font-family: 'Montserrat Alternates', sans-serif;
 }
+
+#input {
+  margin-bottom: 20px;
+}
+
+#search-input {
+  padding: 10px 40px;
+  border: 1px solid black;
+  font-family: 'Montserrat Alternates', sans-serif;
+}
+
+#search-submit {
+  padding: 11px 40px;
+  margin-left: 10px;
+  background-color: tomato;
+  border: none;
+  font-family: 'Montserrat Alternates', sans-serif;
+  cursor: pointer;
+  font-size: white;
+}
+

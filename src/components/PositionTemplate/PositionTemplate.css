@@ -13,26 +13,38 @@
 #position-title {
   font-size: 30px;
   color: tomato;
+  font-family: 'Montserrat Alternates', sans-serif;
 }
 
 #position-description {
   font-size: 20px;
   text-align: left;
+  font-family: 'Montserrat Alternates', sans-serif;
 }
 
 #position-title, #position-company, #position-city, #position-id, #position-date {
   width: 100%;
   margin: 0;
+  font-family: 'Montserrat Alternates', sans-serif;
 }
 
 #position-title {
   margin: 10px 0;
+  font-family: 'Montserrat Alternates', sans-serif;
 }
 
 #position-company {
   margin: 10px 0;
+  font-family: 'Montserrat Alternates', sans-serif;
 }
 
 #position-city {
   margin: 10px 0;
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-size: 18px;
+}
+
+#position-date {
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-size: 15px;
 }

@@ -8,6 +8,8 @@
   border: 3px solid black;
   margin: 3vh 1vw;
   padding: 5vh 0;
+  /*background: rgba(0, 0, 0, 0.2);*/
+  background-color: #FFFFF0;
 }
 
 #position-container {
@@ -16,10 +18,13 @@
   width: 100%;
   justify-content: center;
   align-items: center;
+  /*background: rgba(0, 0, 0, 0.2);*/
 }
 
 #position-main-container:hover {
   border: 3px solid tomato;
+  /*background-color:*/
+  background: rgba(0, 0, 0, 0.1);
 }
 
 #position-link {
@@ -38,8 +43,14 @@
 }
 
 #position-container-button {
-background: none;
-border: 3px solid black;
-margin-top: 4vh;
-font-size: 25px;
+  background: none;
+  border: 3px solid black;
+  margin-top: 4vh;
+  font-size: 25px;
+  font-family: 'Montserrat Alternates', sans-serif;
+}
+
+#position-container-button:hover {
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
 }

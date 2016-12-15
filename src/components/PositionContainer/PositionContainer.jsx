@@ -12,13 +12,14 @@ export default class PositionContainer extends Component {
   }
 
   render() {
-
+    <link href="https://fonts.googleapis.com/css?family=Montserrat+Alternates" rel="stylesheet" />
     console.log(this);
 
     const PositionContainer = props => {
 
       const positions = props.jobs.map((job, i) => {
         return (
+
           <div key={i} id="position-main-container">
             <PositionTemplate
               // id={job.id}

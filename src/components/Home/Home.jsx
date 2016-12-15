@@ -24,7 +24,7 @@ const Home = props => (
     {/*<h3 id="home-h3">Alarina identifies specific job openings for which companies will sponsor employment visas.</h3>*/}
       {/*We value the diversity of our employees and the unique perspectives they bring to Alarina.*/}
     <div id="explore-button">
-      <Link id="home-link" to="/main">Find Your Future Job</Link>
+      <Link id="home-link" to="/main">Explore Now</Link>
     </div>
 
 

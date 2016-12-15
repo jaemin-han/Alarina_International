@@ -5,6 +5,7 @@
   overflow-x: hidden;
   overflow-y: auto;
   background-color: #FFFFF0;
+/*  background: rgba(0, 0, 0, 0.4);*/
 }
 
 .position-main-container-page {
@@ -17,6 +18,7 @@
   border: 3px solid black;
   margin: 5vh 1vw;
   padding: 5vh 3vw;
+  background: rgba(0, 0, 0, 0.2);
 }
 
 .position-main-container-page:hover {
@@ -25,44 +27,87 @@
 
 #company-information {
   width: 100%;
+  color: tomato;
+  font-family: 'Montserrat Alternates', sans-serif;
 }
 
 #company-name {
   width: 100%;
+  color: black;
+  font-family: 'Montserrat Alternates', sans-serif;
 }
 
 #company-description {
   width: 100%;
+  color: black;
+  font-size: 20px;
+  font-family: 'Montserrat Alternates', sans-serif;
 }
 
 #company-industry {
   width: 100%;
+  color: black;
+  font-family: 'Montserrat Alternates', sans-serif;
 }
 
 #company-city {
   width: 100%;
+  color: black;
+  font-family: 'Montserrat Alternates', sans-serif;
 }
 
 #company-website {
   width: 100%;
+  color: black;
+  font-family: 'Montserrat Alternates', sans-serif;
 }
 
 #job-title {
   width: 100%;
+  color: tomato;
+  font-family: 'Montserrat Alternates', sans-serif;
 }
 
-#ob-position {
+#job-position {
   width: 100%;
+  color: black;
+  font-size: 27px;
+  font-family: 'Montserrat Alternates', sans-serif;
 }
 
 #job-description {
   width: 100%;
+  color: black;
+  font-size: 20px;
+  font-family: 'Montserrat Alternates', sans-serif;
 }
 
 #job-city {
   width: 100%;
+  color: black;
+  font-size: 22px;
+  font-family: 'Montserrat Alternates', sans-serif;
 }
 
 #job-date {
   width: 100%;
+  color: black;
+  font-size: 15px;
+  font-family: 'Montserrat Alternates', sans-serif;
+}
+
+#resume {
+  background: url('./resume.png') no-repeat;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+
+#resume-click {
+  width: 100%;
+  color: black;
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-size: 12px;
+  margin-top: 8vh;
+  cursor: pointer;
 }

@@ -17,8 +17,8 @@ export default class CompanyModal extends Component {
     return(
       // Div id containing company 'register' and 'sign in'
       <div id="company-modal-container">
-        {/*Add Google Font Link Here*/}
-        <h2 id="register-title-company">- Company Register -</h2>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat+Alternates" rel="stylesheet" />
+        <h2 id="register-title-company">Company Register</h2>
 
         <div id="register-items-company">
 
@@ -96,9 +96,11 @@ export default class CompanyModal extends Component {
           <button id="first-company-register-button" onClick={this.props.handleCompanyRegisterFormSubmit}>Register</button>
         </div>
 
+        <hr id="line-style-two"/>
+
         {/* SIGN UP SECTION - company */}
 
-        <h2 id="signin-title-company">- Company Sign In -</h2>
+        <h2 id="signin-title-company">Company Sign In</h2>
 
         <div id="sign-in-items-company">
 

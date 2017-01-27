@@ -1,6 +1,6 @@
 'use strict'
 // Storage for local variables: typically (API) KEYS
-// Requires the express library
+// Requires the Express - flexible Node.js web application framework
 // Logger that sends inputs(errors: 200, 304, 404, 500, etc) to the terminal
 // Gets the public folder(CSS/HTML)
 require('dotenv').config({ silent: true });
@@ -16,7 +16,7 @@ const jobRoute = require('./routes/job.js');
 
 const isDev = !('NODE_ENV' in process.env) && require('dotenv').config() && true;
 
-// Invoking the express library
+// Invoking the express, a web application framework for Node.js
 // Localhost 3000 || other ports stated
 const app = express();
 const PORT = process.argv[2] || process.env.PORT || 3000;
